@@ -1,4 +1,3 @@
-// ===== Referencias al DOM =====
 const formulario = document.getElementById("form-tarea");
 const inputTarea = document.getElementById("input-tarea");
 const mensajeError = document.getElementById("mensaje-error");
@@ -10,11 +9,9 @@ const spanCompletadas = document.getElementById("completadas");
 const spanPendientes = document.getElementById("pendientes");
 const barraProgreso = document.getElementById("barra-progreso");
 
-// ===== Estado =====
 let tareas = [];
 let siguienteId = 1;
 
-// ===== Funciones =====
 function agregarTarea(texto) {
   tareas.push({ id: siguienteId++, texto: texto, completada: false });
   render();
@@ -116,5 +113,4 @@ inputTarea.addEventListener("input", function () {
   mensajeError.textContent = "";
 });
 
-// ===== Inicio =====
 render();
